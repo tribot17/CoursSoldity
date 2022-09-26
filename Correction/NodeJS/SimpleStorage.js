@@ -1,5 +1,5 @@
 const Web3 = require("web3");
-const rpcURL = "https://ropsten.infura.io/v3/7c0fd0040dfd419d9e358dbbf77288ee";
+const rpcURL = "https://ropsten.infura.io/v3/id";
 const web3 = new Web3(rpcURL);
 const ABI = [
   {
@@ -27,10 +27,7 @@ simpleStorage.methods.get().call((err, data) => {
 
 const set = () => {
   const account1 = "0x3b4363c323B164497F999103194798FC246362fB";
-  const privatekey1 = Buffer.from(
-    "3ab0a460f76f6d33e73e2f81f1e1d1272f30ae56ad046bb0f695779802725e10",
-    "hex"
-  );
+  const privatekey1 = Buffer.from("private_key", "hex");
 
   web3.eth.getTransactionCount(account1, (err, txCount) => {
     const simpleStorage = new web3.eth.Contract(ABI, SSaddress);
