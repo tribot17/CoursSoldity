@@ -2,8 +2,8 @@ const { BN } = require("@openzeppelin/test-helpers");
 const { expect } = require("chai");
 const ERC20 = artifacts.require("ERC20Token");
 contract("ERC20", function (accounts) {
-  const _name = "ALYRA";
-  const _symbol = "ALY";
+  const _name = "COURS";
+  const _symbol = "CRS";
   const _initialsupply = new BN(1000);
   const _decimals = new BN(18);
   const owner = accounts[0];
